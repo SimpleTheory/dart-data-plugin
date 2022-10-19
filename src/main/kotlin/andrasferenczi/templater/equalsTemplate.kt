@@ -91,7 +91,8 @@ fun createEqualsTemplate(
 
                     if (index != variables.lastIndex) {
                         addSpace()
-                        addTextSegment("&& \n\n")
+                        addTextSegment("&& ")
+                        addNewLine()
                     }
                 }
 
