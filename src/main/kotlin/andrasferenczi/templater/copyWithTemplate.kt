@@ -42,8 +42,10 @@ fun createCopyWithConstructorTemplate(
                         }
                         addTextSegment(" ")
                         addTextSegment(it.publicVariableName)
+                        addTextSegment("_")
                         addTextSegment(",")
-                        addNewLine()
+                        addSpace()
+//                        addNewLine()
                     }
                 }
             }
@@ -112,18 +114,38 @@ fun createCopyWithConstructorTemplate(
             withParentheses {
                 addNewLine()
 
-                variables.forEach {
-                    addTextSegment(it.namedConstructorParamName)
-                    addTextSegment(":")
-                    addSpace()
-                    addTextSegment(it.publicVariableName)
-                    addSpace()
-                    addTextSegment("??")
-                    addSpace()
-                    addTextSegment("this.")
-                    addTextSegment(it.variableName)
-                    addComma()
-                    addNewLine()
+                variables.forEachIndexed {index, it ->
+                    if(!it.type.contains("List")) {
+                        addTextSegment(it.namedConstructorParamName)
+                        addTextSegment("_")
+                        addTextSegment(":")
+                        addSpace()
+                        addTextSegment(it.publicVariableName)
+                        addTextSegment("_")
+                        addSpace()
+                        addTextSegment("??")
+                        addSpace()
+                        addTextSegment(it.variableName)
+                    }
+                    else{
+                        addTextSegment(it.namedConstructorParamName)
+                        addTextSegment("_")
+                        addTextSegment(":")
+                        addSpace()
+                        addTextSegment(it.publicVariableName)
+                        addTextSegment("_")
+                        addSpace()
+                        addTextSegment("??")
+                        addSpace()
+                        addTextSegment("List.from")
+                        withParentheses {
+                            addTextSegment(it.variableName)
+                        }
+                    }
+                    if (index != variables.lastIndex){
+                        addComma()
+                        addNewLine()
+                    }
                 }
             }
 

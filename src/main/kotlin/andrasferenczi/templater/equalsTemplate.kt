@@ -44,14 +44,14 @@ fun createEqualsTemplate(
             addNewLine()
 
             withParentheses {
-                addTextSegment(TemplateConstants.EQUALS_VARIABLE_NAME)
-                addSpace()
-                addTextSegment("is")
-                addSpace()
-                addTextSegment(className)
-                addTextSegment("&&")
-
-                addNewLine()
+//                addTextSegment(TemplateConstants.EQUALS_VARIABLE_NAME)
+//                addSpace()
+//                addTextSegment("is")
+//                addSpace()
+//                addTextSegment(className)
+//                addTextSegment("&&")
+//
+//                addNewLine()
 
                 val variables: List<NamedVariableTemplateParam> = mutableListOf<NamedVariableTemplateParam>().apply {
                     add(
@@ -72,6 +72,8 @@ fun createEqualsTemplate(
                     addTextSegment(TemplateConstants.EQUALS_VARIABLE_NAME)
                     addDot()
                     addTextSegment(variable.variableName)
+                    addTextSegment(".toString()")
+
 
                     if (index != variables.lastIndex) {
                         addSpace()
