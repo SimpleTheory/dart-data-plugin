@@ -64,18 +64,19 @@ fun createEqualsTemplate(
                 }
 
                 variables.forEachIndexed { index, variable ->
-
-                    addTextSegment(variable.variableName)
-                    addTextSegment(".runtimeType")
-                    addSpace()
-                    addTextSegment("==")
-                    addSpace()
-                    addTextSegment(TemplateConstants.EQUALS_VARIABLE_NAME)
-                    addDot()
-                    addTextSegment(variable.variableName)
-                    addTextSegment(".runtimeType")
-                    addTextSegment(" &&")
-                    addNewLine()
+                    if (variable.variableName != "runtimeType"){
+                        addTextSegment(variable.variableName)
+                        addTextSegment(".runtimeType")
+                        addSpace()
+                        addTextSegment("==")
+                        addSpace()
+                        addTextSegment(TemplateConstants.EQUALS_VARIABLE_NAME)
+                        addDot()
+                        addTextSegment(variable.variableName)
+                        addTextSegment(".runtimeType")
+                        addTextSegment(" &&")
+                        addNewLine()
+                    }
 
                     addTextSegment(variable.variableName)
                     addTextSegment(".toString()")
@@ -90,9 +91,7 @@ fun createEqualsTemplate(
 
                     if (index != variables.lastIndex) {
                         addSpace()
-                        addTextSegment("&&")
-                        addNewLine()
-                        addNewLine()
+                        addTextSegment("&& \n\n")
                     }
                 }
 
