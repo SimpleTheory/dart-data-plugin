@@ -1,7 +1,7 @@
 <idea-plugin>
-    <id>andrasferenczi.dart-data-plugin</id>
-    <name>Dart Data Class</name>
-    <vendor email="a.ferenczi.andras@gmail.com">Andras Ferenczi</vendor>
+    <id>ari.dart-data-plugin</id>
+    <name>Dart Data Class Ari</name>
+    <vendor email="no">Ari Frid</vendor>
 
     <depends>Dart</depends>
     <!--    To prevent it from being legacy-->

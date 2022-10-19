@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/dart-data-plugin.iml" filepath="$PROJECT_DIR$/.idea/dart-data-plugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/dart-data-plugin.main.iml" filepath="$PROJECT_DIR$/.idea/modules/dart-data-plugin.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/dart-data-plugin.test.iml" filepath="$PROJECT_DIR$/.idea/modules/dart-data-plugin.test.iml" />
     </modules>
   </component>
 </project>
