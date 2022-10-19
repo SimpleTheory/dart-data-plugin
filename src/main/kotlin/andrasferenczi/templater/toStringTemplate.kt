@@ -37,14 +37,10 @@ fun createToStringTemplate(
 
                 // Cannot use with, since they are closed in different order
                 addTextSegment("{")
-            }
 
-            addSpace()
-            addTextSegment("+")
-            addNewLine()
+                addNewLine()
 
             variables.forEach { variable ->
-                withSingleQuotes {
                     addSpace()
                     addTextSegment(variable.variableName)
                     addTextSegment(":")
