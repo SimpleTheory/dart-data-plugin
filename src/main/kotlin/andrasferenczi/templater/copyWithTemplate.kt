@@ -117,7 +117,6 @@ fun createCopyWithConstructorTemplate(
                 variables.forEachIndexed {index, it ->
                     if(!it.type.contains("List")) {
                         addTextSegment(it.namedConstructorParamName)
-                        addTextSegment("_")
                         addTextSegment(":")
                         addSpace()
                         addTextSegment(it.publicVariableName)
@@ -129,7 +128,6 @@ fun createCopyWithConstructorTemplate(
                     }
                     else{
                         addTextSegment(it.namedConstructorParamName)
-                        addTextSegment("_")
                         addTextSegment(":")
                         addSpace()
                         addTextSegment(it.publicVariableName)

@@ -90,7 +90,6 @@ private fun Template.addToMap(params: MapTemplateParams) {
 
                 addTextSegment(":")
                 addSpace()
-                addTextSegment("this.")
                 addTextSegment(it.variableName)
                 addComma()
                 addNewLine()
